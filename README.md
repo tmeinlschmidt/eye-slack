@@ -2,7 +2,7 @@
 
 Sends info about process crashes to Slack channel.
 
-**NOTE**: This will **NOT** work with eye > 0.7
+**NOTE**: This will **NOT** probably work with eye > 0.7
 
 ## Installation
 
@@ -30,8 +30,8 @@ this is an example configuration file
 require 'eye/notify/slack'
 
 Eye.config do
-  slack webhook_url: 'url', message: '<strong>#name#</strong> (#pid#) on #host# #message# at #time#.'
-  contact :dev, :slack, 'test'
+  slack webhook_url: 'url', username: 'eye', color: 'danger'
+  contact :dev, :slack, '#test'
   logger '/tmp/eye.log'
 end
 
@@ -55,9 +55,9 @@ end
  * `webhook_url` - *required* - webhook URL
  * `username` - who is reporting to slack, *Eye Bot* as a default
  * `color` - *#f0f0f0* is default. You can choose from RGB or `good`, `warning` and `danger`
- * `icon` - either emoji or URL of the icon
+ * `icon` - either emoji or URL of the icon, emoji *must* start and end with `:`
  * `title` - title, displayed in bold
- * `message` - message to be sent, default is `<strong>#name#</strong> on #host# #message# at #time#.`
+ * `message` - message to be sent, default is `*#name#* on #host# *#message#* at #time#.`
 
 * `message` has following variables (variable must be enclosed to ##)
  * `time` - human readable time of the event
