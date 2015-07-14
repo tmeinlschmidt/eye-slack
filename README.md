@@ -49,6 +49,8 @@ Eye.application 'test' do
 end
 ````
 
+**NOTE** You need to quit eye and load it back after adding `require`.
+
 # Configuration
 
 * add `slack` line to `Eye.config` section and check following parameters
