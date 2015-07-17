@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Eye::Notify::Slack::VERSION
   spec.authors       = ["Tom Meinlschmidt"]
   spec.email         = ["tomas@meinlschmidt.org"]
-  spec.summary       = %q{Eye to hipchat notification}
-  spec.description   = %q{Eye to hipchat notification}
-  spec.homepage      = "https://github.com/tmeinlschmidt/eye-hipchat"
+  spec.summary       = %q{Eye to Slack notification}
+  spec.description   = %q{Eye to Slack notification}
+  spec.homepage      = "https://github.com/tmeinlschmidt/eye-slack"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
