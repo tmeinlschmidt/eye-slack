@@ -2,14 +2,13 @@
 
 Sends info about process crashes to Slack channel.
 
-**NOTE**: This will **NOT** probably work with eye > 0.7
+**NOTE** see Changelog.md for changes
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'eye'
 gem 'eye-slack'
 ```
 
@@ -27,11 +26,11 @@ this is an example configuration file
 
 ````
 # Notify example
-require 'eye/notify/slack'
+require 'eye/notify/eye_slack'
 
 Eye.config do
-  slack webhook_url: 'url', username: 'eye', color: 'danger'
-  contact :dev, :slack, '#test'
+  eye_slack webhook_url: 'url', username: 'eye', color: 'danger'
+  contact :dev, :eye_slack, '#test'
   logger '/tmp/eye.log'
 end
 
@@ -53,7 +52,7 @@ end
 
 # Configuration
 
-* add `slack` line to `Eye.config` section and check following parameters
+* add `eye_slack` line to `Eye.config` section and check following parameters
  * `webhook_url` - *required* - webhook URL
  * `username` - who is reporting to slack, *Eye Bot* as a default
  * `color` - *#f0f0f0* is default. You can choose from RGB or `good`, `warning` and `danger`

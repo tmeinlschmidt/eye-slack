@@ -1,12 +1,12 @@
 require 'eye'
-require 'eye/notify/slack/version'
+require 'eye/notify/eye_slack/version'
 
 require 'slack-notifier'
 
 module Eye
   class Notify
 
-    class Slack < Eye::Notify::Custom
+    class EyeSlack < Eye::Notify::Custom
 
       # Eye.config do
       #   slack webhook_url: '1312312', icon: '', username: 'eye bot', color: '#f0f0f0', channel

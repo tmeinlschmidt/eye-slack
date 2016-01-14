@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'eye/notify/slack/version'
+require 'eye/notify/eye_slack/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "eye-slack"
-  spec.version       = Eye::Notify::Slack::VERSION
+  spec.version       = Eye::Notify::EyeSlack::VERSION
   spec.authors       = ["Tom Meinlschmidt"]
   spec.email         = ["tomas@meinlschmidt.org"]
   spec.summary       = %q{Eye to Slack notification}
@@ -22,6 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
 
   spec.add_runtime_dependency "slack-notifier", "~> 1.2.1"
-  spec.add_runtime_dependency "eye", "~> 0.5"
+  spec.add_runtime_dependency "eye", ">= 0.6"
 
 end
